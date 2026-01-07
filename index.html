@@ -2,231 +2,203 @@
 <html class="dark" lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Onboarding - Event Workforce</title>
-    <meta name="description"
-        content="Orchestrate events without the chaos - Find workers, book services, and manage your team effortlessly">
-
-    <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>User Registration</title>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-        rel="stylesheet">
-
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="styles.css">
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f48c25",
+                        "background-light": "#f8f7f5",
+                        "background-dark": "#221910",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
 </head>
 
-<body>
-    <!-- Header -->
-    <header class="header">
-        <!-- Logo (Only on Screen 1) -->
-        <div class="logo-container" id="logoContainer">
-            <div class="logo-icon">
-                <span class="material-symbols-outlined">event_seat</span>
-            </div>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased text-slate-900 dark:text-white">
+    <div
+        class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark overflow-x-hidden group/design-root">
+        <!-- Header -->
+        <div
+            class="flex items-center px-4 py-4 justify-between sticky top-0 z-10 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm">
+            <button
+                class="flex items-center justify-center size-10 rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors -ml-2 text-slate-800 dark:text-white">
+                <span class="material-symbols-outlined text-[24px]">arrow_back</span>
+            </button>
         </div>
 
-        <!-- Skip Button -->
-        <button class="skip-button" id="skipButton">
-            <span>Skip</span>
-        </button>
-    </header>
-
-    <!-- Screen Container (for transitions) -->
-    <div class="screen-wrapper" id="screenWrapper">
-
-        <!-- ============================================
-             SCREEN 1: WELCOME
-             ============================================ -->
-        <div class="screen active" id="screen1">
-            <div class="main-wrapper">
-                <!-- Hero Section -->
-                <div class="hero-section">
-                    <div class="glow-effect"></div>
-
-                    <div class="hero-card">
-                        <div class="hero-image-wrapper">
-                            <div class="hero-image screen1-image"></div>
-                            <div class="image-overlay"></div>
-                        </div>
-
-                        <div class="staff-card">
-                            <div class="staff-icon">
-                                <span class="material-symbols-outlined">group_add</span>
-                            </div>
-                            <div class="staff-info">
-                                <p class="staff-label">Staff Assigned</p>
-                                <p class="staff-text">Catering Team (5 Members)</p>
-                            </div>
-                            <div class="check-badge">
-                                <span class="material-symbols-outlined">check</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Content Section -->
-                <div class="content-section">
-                    <div class="text-content">
-                        <h1>
-                            Orchestrate Events <br>
-                            <span class="gradient-text">Without the Chaos</span>
-                        </h1>
-                        <p>
-                            The all-in-one platform to find workers, book services, and manage your team effortlessly.
-                        </p>
-                    </div>
-
-                    <div class="button-group screen1-buttons">
-                        <button class="primary-button" id="getStartedButton">
-                            Get Started
-                        </button>
-                        <button class="secondary-button" id="loginButton">
-                            Log In
-                        </button>
-                    </div>
-                </div>
+        <!-- Main Content -->
+        <main class="flex-1 flex flex-col px-4 pb-8">
+            <!-- Headline -->
+            <div class="mb-8 mt-2">
+                <h1
+                    class="text-slate-900 dark:text-white tracking-tight text-[32px] font-bold leading-tight text-left pb-2">
+                    Create Account</h1>
+                <p class="text-slate-500 dark:text-[#cbad90] text-base font-normal leading-normal">Sign up to start
+                    managing your workers and events.</p>
             </div>
-        </div>
 
-        <!-- ============================================
-             SCREEN 2: SERVICE PROVIDERS
-             ============================================ -->
-        <div class="screen" id="screen2">
-            <div class="main-wrapper">
-                <!-- Hero Section - Profile Grid -->
-                <div class="hero-section">
-                    <div class="glow-effect"></div>
-
-                    <div class="profile-grid-container">
-                        <div class="profile-grid">
-                            <!-- Large Profile Card -->
-                            <div class="profile-card large">
-                                <div class="profile-image"
-                                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD2W6aq3fuyN5QogAsNCyTgMw1UsMbrMjyVOxtXpdusCMHwmzo6i8GyI-RzO4i3Ew8NUPgKAMW5SOswXrYQVaJVRRHPBBXSophSn1zgEpkLcVrLT8cWUio74XiV5XLhKFPL_befjgB3lH1FdVy2Fl8HhNG9OqS4P-wswvg3sXDrKg4h3kqTuYCcNzHQaxtfcp8HuFxMIMh-QNJ-mQUIT8LAMHynb3mE7pWdorxH6V6j7tWR-Zrsyl13Ci-QD0oWkAIfn0wYVN2dqw');">
-                                </div>
-                                <div class="profile-overlay"></div>
-                                <div class="verified-badge">
-                                    <span class="material-symbols-outlined">verified</span>
-                                    <span>Verified</span>
-                                </div>
-                            </div>
-
-                            <!-- Small Profile Card Top -->
-                            <div class="profile-card small">
-                                <div class="profile-image"
-                                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCmr0QlGq4_wqiHWQI-olf3agvOWTs18qVpTbCMFbOEY2Va9py_UnaRB3VANs2VkK7CiWWDb9WcHJT39xYKMxpNyHiyp3inOt9x_oDgzbxeC5hHOpF-fMLgOIUO-dr1528mgftju5B-2MPVup-K5g19IQz6KTpvliYzgYQEsOEaK2fO-N44-5MQ1YqnJq7w3DEoQI7Q5zlxqTAjwIzlqc-in5GlHZzkE0cHwpSJ7gIP5p7xnJIn3Vx0_LVFq1oSDc8DbTxAuM1D9w');">
-                                </div>
-                                <div class="skill-badge">
-                                    <span class="material-symbols-outlined">bolt</span>
-                                </div>
-                            </div>
-
-                            <!-- Small Profile Card Bottom -->
-                            <div class="profile-card small">
-                                <div class="profile-image"
-                                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBHdH2edrTf2PN5s2a9JEcWxZyzNavY3z4uQnWnOxNlIEwScOCN0WkSvcrFbKkDjuObHiMrr13GpD3XkTyQBZgE7jYin4r-MGxDoZ-3AUQgpbDEO6nA80gA4j7tOF-LaIWxDZnxRVIFykfUd16ZqcO-T93yLPSqZmTKyBcXmL9FfG-B1dPyWfVj0JToupaVKVysfrSahwv--PYjsX_rl2VdeCVq_10LaxpzKlwyixsUH_r5U-kOmNu7ppLn68fev9GYzr8UKDvIig');">
-                                </div>
-                                <div class="rating-badge">4.9 ★</div>
-                            </div>
+            <!-- Form -->
+            <form action="#" class="flex flex-col gap-5" onsubmit="event.preventDefault();">
+                <!-- Full Name -->
+                <div class="flex flex-col gap-2">
+                    <label class="text-slate-900 dark:text-white text-base font-medium leading-normal">Full Name</label>
+                    <div class="relative">
+                        <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                            <span
+                                class="material-symbols-outlined text-slate-400 dark:text-[#cbad90] text-[22px]">person</span>
                         </div>
+                        <input
+                            class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-slate-900 dark:text-white focus:outline-0 focus:ring-1 focus:ring-primary border border-slate-200 dark:border-[#684d31] bg-white dark:bg-[#342618] focus:border-primary h-14 placeholder:text-slate-400 dark:placeholder:text-[#cbad90]/60 pl-[52px] pr-4 text-base font-normal leading-normal transition-all"
+                            placeholder="John Doe" value="" />
                     </div>
                 </div>
 
-                <!-- Content Section -->
-                <div class="content-section">
-                    <div class="text-content">
-                        <h1>
-                            Connect with Top <br>
-                            <span class="gradient-text">Service Providers</span>
-                        </h1>
-                        <p>
-                            Effortlessly browse, filter, and book skilled professionals for your specific event needs.
-                            Verified profiles, real ratings, and instant booking.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- ============================================
-             SCREEN 3: MANAGEMENT TOOLS
-             ============================================ -->
-        <div class="screen" id="screen3">
-            <div class="main-wrapper">
-                <!-- Hero Section -->
-                <div class="hero-section">
-                    <div class="glow-effect"></div>
-
-                    <div class="hero-card">
-                        <div class="hero-image-wrapper">
-                            <div class="hero-image screen3-image"></div>
-                            <div class="image-overlay"></div>
+                <!-- Email -->
+                <div class="flex flex-col gap-2">
+                    <label class="text-slate-900 dark:text-white text-base font-medium leading-normal">Email
+                        Address</label>
+                    <div class="relative">
+                        <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                            <span
+                                class="material-symbols-outlined text-slate-400 dark:text-[#cbad90] text-[22px]">mail</span>
                         </div>
-
-                        <div class="management-card">
-                            <div class="management-icon">
-                                <span class="material-symbols-outlined">insights</span>
-                            </div>
-                            <div class="management-info">
-                                <p class="management-label">Real-time Analytics</p>
-                                <p class="management-text">Track Performance</p>
-                            </div>
-                            <div class="trend-indicator">
-                                <span class="material-symbols-outlined">trending_up</span>
-                            </div>
-                        </div>
+                        <input
+                            class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-slate-900 dark:text-white focus:outline-0 focus:ring-1 focus:ring-primary border border-slate-200 dark:border-[#684d31] bg-white dark:bg-[#342618] focus:border-primary h-14 placeholder:text-slate-400 dark:placeholder:text-[#cbad90]/60 pl-[52px] pr-4 text-base font-normal leading-normal transition-all"
+                            placeholder="john@example.com" type="email" value="" />
                     </div>
                 </div>
 
-                <!-- Content Section -->
-                <div class="content-section">
-                    <div class="text-content">
-                        <h1>
-                            Manage Everything <br>
-                            <span class="gradient-text">In One Place</span>
-                        </h1>
-                        <p>
-                            Track your team, monitor budgets, and get real-time updates. Powerful analytics and insights
-                            at your fingertips.
-                        </p>
+                <!-- Phone Number -->
+                <div class="flex flex-col gap-2">
+                    <label class="text-slate-900 dark:text-white text-base font-medium leading-normal">Phone
+                        Number</label>
+                    <div class="relative">
+                        <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                            <span
+                                class="material-symbols-outlined text-slate-400 dark:text-[#cbad90] text-[22px]">call</span>
+                        </div>
+                        <input
+                            class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-slate-900 dark:text-white focus:outline-0 focus:ring-1 focus:ring-primary border border-slate-200 dark:border-[#684d31] bg-white dark:bg-[#342618] focus:border-primary h-14 placeholder:text-slate-400 dark:placeholder:text-[#cbad90]/60 pl-[52px] pr-4 text-base font-normal leading-normal transition-all"
+                            placeholder="+1 234 567 890" type="tel" value="" />
                     </div>
+                </div>
 
-                    <div class="button-group screen3-buttons">
-                        <button class="primary-button" id="finishButton">
-                            Get Started
-                        </button>
-                        <button class="secondary-button" id="loginButton2">
-                            Log In
+                <!-- Password -->
+                <div class="flex flex-col gap-2">
+                    <label class="text-slate-900 dark:text-white text-base font-medium leading-normal">Password</label>
+                    <div class="relative">
+                        <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                            <span
+                                class="material-symbols-outlined text-slate-400 dark:text-[#cbad90] text-[22px]">lock</span>
+                        </div>
+                        <input
+                            class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-slate-900 dark:text-white focus:outline-0 focus:ring-1 focus:ring-primary border border-slate-200 dark:border-[#684d31] bg-white dark:bg-[#342618] focus:border-primary h-14 placeholder:text-slate-400 dark:placeholder:text-[#cbad90]/60 pl-[52px] pr-12 text-base font-normal leading-normal transition-all"
+                            placeholder="•••••••••" type="password" value="" />
+                        <button
+                            class="absolute inset-y-0 right-0 pr-4 flex items-center text-slate-400 dark:text-[#cbad90] hover:text-primary dark:hover:text-primary transition-colors"
+                            type="button">
+                            <span class="material-symbols-outlined text-[22px]">visibility_off</span>
                         </button>
                     </div>
                 </div>
-            </div>
-        </div>
 
+                <!-- Terms -->
+                <div class="flex items-start gap-3 mt-1">
+                    <div class="flex items-center h-5">
+                        <input
+                            class="w-5 h-5 border border-slate-300 dark:border-[#684d31] rounded bg-white dark:bg-[#342618] focus:ring-primary text-primary dark:checked:bg-primary dark:checked:border-primary transition-colors"
+                            id="terms" type="checkbox" />
+                    </div>
+                    <label class="text-sm text-slate-500 dark:text-[#cbad90]" for="terms">
+                        I agree to the <a class="font-medium text-primary hover:text-orange-600" href="#">Terms of
+                            Service</a> and <a class="font-medium text-primary hover:text-orange-600" href="#">Privacy
+                            Policy</a>.
+                    </label>
+                </div>
+
+                <!-- Submit Button -->
+                <button
+                    class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-xl h-14 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-orange-600 transition-colors mt-2 shadow-lg shadow-orange-900/20">
+                    <span class="truncate">Sign Up</span>
+                </button>
+
+                <!-- Divider -->
+                <div class="relative my-2">
+                    <div class="absolute inset-0 flex items-center">
+                        <div class="w-full border-t border-slate-200 dark:border-[#3e2d1e]"></div>
+                    </div>
+                    <div class="relative flex justify-center text-sm">
+                        <span
+                            class="px-2 bg-background-light dark:bg-background-dark text-slate-500 dark:text-[#7d654f]">Or
+                            register with</span>
+                    </div>
+                </div>
+
+                <!-- Social Buttons -->
+                <div class="grid grid-cols-2 gap-4">
+                    <button
+                        class="flex items-center justify-center gap-2.5 h-12 bg-white dark:bg-[#342618] border border-slate-200 dark:border-[#684d31] rounded-xl hover:bg-slate-50 dark:hover:bg-[#3e2d1e] transition-colors"
+                        type="button">
+                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                                fill="#4285F4"></path>
+                            <path
+                                d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                                fill="#34A853"></path>
+                            <path
+                                d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                                fill="#FBBC05"></path>
+                            <path
+                                d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                                fill="#EA4335"></path>
+                        </svg>
+                        <span class="text-sm font-medium text-slate-700 dark:text-white">Google</span>
+                    </button>
+                    <button
+                        class="flex items-center justify-center gap-2.5 h-12 bg-white dark:bg-[#342618] border border-slate-200 dark:border-[#684d31] rounded-xl hover:bg-slate-50 dark:hover:bg-[#3e2d1e] transition-colors"
+                        type="button">
+                        <svg class="h-5 w-5 text-black dark:text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M17.05 20.28c-.98.95-2.05.88-3.08.35-1.09-.56-2.09-.48-3.08.35 1.04 1.39 2.24 1.32 3.08.87 1.16-.62 2.05-.62 3.08 0 .89.54 1.83.62 2.67-.87-3.79-1.55-4.5-5.97-1.12-6.52.09-2.03 1.25-3.23 3.08-3.37 1.32-.1 2.58.42 3.25.75.66.33 1.5.25 2.45-.75.81-.85 1.25-1.85 1.33-2.04-.08-.02-2.37.95-3.08 4.08-.34 1.48.16 2.92.5 3.5.03.05.06.1.1.15-2.83 1.15-4.33 3.58-3.5 6.37.49 1.68 1.46 3.08 2.5 4.08zM12.03 7.25c.08-.08 2.08-2.58 1.83-4.25-1.66.17-3.33 1.33-4.08 3.5-.06.17-.12.33-.17.5 1.67.67 3.34-.66 2.42.25z">
+                            </path>
+                        </svg>
+                        <span class="text-sm font-medium text-slate-700 dark:text-white">Apple</span>
+                    </button>
+                </div>
+
+                <!-- Footer -->
+                <p class="text-slate-500 dark:text-[#cbad90] text-sm font-normal leading-normal text-center pb-4 pt-2">
+                    Already have an account? <a class="text-primary font-bold hover:underline" href="#">Log In</a>
+                </p>
+            </form>
+        </main>
     </div>
-
-    <!-- Footer Controls -->
-    <footer class="footer">
-        <!-- Pagination Dots -->
-        <div class="pagination-dots" id="paginationDots">
-            <div class="dot active" data-screen="0"></div>
-            <div class="dot" data-screen="1"></div>
-            <div class="dot" data-screen="2"></div>
-        </div>
-
-        <!-- Next Button -->
-        <button class="next-button" id="nextButton">
-            <span class="button-text">Next</span>
-            <span class="material-symbols-outlined arrow-icon">arrow_forward</span>
-        </button>
-    </footer>
-
-    <!-- JavaScript -->
-    <script src="script.js"></script>
 </body>
 
 </html>
