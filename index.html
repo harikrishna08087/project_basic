@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onboarding - Event Workforce</title>
+    <meta name="description"
+        content="Orchestrate events without the chaos - Find workers, book services, and manage your team effortlessly">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <!-- Logo (Only on Screen 1) -->
+        <div class="logo-container" id="logoContainer">
+            <div class="logo-icon">
+                <span class="material-symbols-outlined">event_seat</span>
+            </div>
+        </div>
+
+        <!-- Skip Button -->
+        <button class="skip-button" id="skipButton">
+            <span>Skip</span>
+        </button>
+    </header>
+
+    <!-- Screen Container (for transitions) -->
+    <div class="screen-wrapper" id="screenWrapper">
+
+        <!-- ============================================
+             SCREEN 1: WELCOME
+             ============================================ -->
+        <div class="screen active" id="screen1">
+            <div class="main-wrapper">
+                <!-- Hero Section -->
+                <div class="hero-section">
+                    <div class="glow-effect"></div>
+
+                    <div class="hero-card">
+                        <div class="hero-image-wrapper">
+                            <div class="hero-image screen1-image"></div>
+                            <div class="image-overlay"></div>
+                        </div>
+
+                        <div class="staff-card">
+                            <div class="staff-icon">
+                                <span class="material-symbols-outlined">group_add</span>
+                            </div>
+                            <div class="staff-info">
+                                <p class="staff-label">Staff Assigned</p>
+                                <p class="staff-text">Catering Team (5 Members)</p>
+                            </div>
+                            <div class="check-badge">
+                                <span class="material-symbols-outlined">check</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content Section -->
+                <div class="content-section">
+                    <div class="text-content">
+                        <h1>
+                            Orchestrate Events <br>
+                            <span class="gradient-text">Without the Chaos</span>
+                        </h1>
+                        <p>
+                            The all-in-one platform to find workers, book services, and manage your team effortlessly.
+                        </p>
+                    </div>
+
+                    <div class="button-group screen1-buttons">
+                        <button class="primary-button" id="getStartedButton">
+                            Get Started
+                        </button>
+                        <button class="secondary-button" id="loginButton">
+                            Log In
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================
+             SCREEN 2: SERVICE PROVIDERS
+             ============================================ -->
+        <div class="screen" id="screen2">
+            <div class="main-wrapper">
+                <!-- Hero Section - Profile Grid -->
+                <div class="hero-section">
+                    <div class="glow-effect"></div>
+
+                    <div class="profile-grid-container">
+                        <div class="profile-grid">
+                            <!-- Large Profile Card -->
+                            <div class="profile-card large">
+                                <div class="profile-image"
+                                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD2W6aq3fuyN5QogAsNCyTgMw1UsMbrMjyVOxtXpdusCMHwmzo6i8GyI-RzO4i3Ew8NUPgKAMW5SOswXrYQVaJVRRHPBBXSophSn1zgEpkLcVrLT8cWUio74XiV5XLhKFPL_befjgB3lH1FdVy2Fl8HhNG9OqS4P-wswvg3sXDrKg4h3kqTuYCcNzHQaxtfcp8HuFxMIMh-QNJ-mQUIT8LAMHynb3mE7pWdorxH6V6j7tWR-Zrsyl13Ci-QD0oWkAIfn0wYVN2dqw');">
+                                </div>
+                                <div class="profile-overlay"></div>
+                                <div class="verified-badge">
+                                    <span class="material-symbols-outlined">verified</span>
+                                    <span>Verified</span>
+                                </div>
+                            </div>
+
+                            <!-- Small Profile Card Top -->
+                            <div class="profile-card small">
+                                <div class="profile-image"
+                                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCmr0QlGq4_wqiHWQI-olf3agvOWTs18qVpTbCMFbOEY2Va9py_UnaRB3VANs2VkK7CiWWDb9WcHJT39xYKMxpNyHiyp3inOt9x_oDgzbxeC5hHOpF-fMLgOIUO-dr1528mgftju5B-2MPVup-K5g19IQz6KTpvliYzgYQEsOEaK2fO-N44-5MQ1YqnJq7w3DEoQI7Q5zlxqTAjwIzlqc-in5GlHZzkE0cHwpSJ7gIP5p7xnJIn3Vx0_LVFq1oSDc8DbTxAuM1D9w');">
+                                </div>
+                                <div class="skill-badge">
+                                    <span class="material-symbols-outlined">bolt</span>
+                                </div>
+                            </div>
+
+                            <!-- Small Profile Card Bottom -->
+                            <div class="profile-card small">
+                                <div class="profile-image"
+                                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBHdH2edrTf2PN5s2a9JEcWxZyzNavY3z4uQnWnOxNlIEwScOCN0WkSvcrFbKkDjuObHiMrr13GpD3XkTyQBZgE7jYin4r-MGxDoZ-3AUQgpbDEO6nA80gA4j7tOF-LaIWxDZnxRVIFykfUd16ZqcO-T93yLPSqZmTKyBcXmL9FfG-B1dPyWfVj0JToupaVKVysfrSahwv--PYjsX_rl2VdeCVq_10LaxpzKlwyixsUH_r5U-kOmNu7ppLn68fev9GYzr8UKDvIig');">
+                                </div>
+                                <div class="rating-badge">4.9 ★</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content Section -->
+                <div class="content-section">
+                    <div class="text-content">
+                        <h1>
+                            Connect with Top <br>
+                            <span class="gradient-text">Service Providers</span>
+                        </h1>
+                        <p>
+                            Effortlessly browse, filter, and book skilled professionals for your specific event needs.
+                            Verified profiles, real ratings, and instant booking.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================
+             SCREEN 3: MANAGEMENT TOOLS
+             ============================================ -->
+        <div class="screen" id="screen3">
+            <div class="main-wrapper">
+                <!-- Hero Section -->
+                <div class="hero-section">
+                    <div class="glow-effect"></div>
+
+                    <div class="hero-card">
+                        <div class="hero-image-wrapper">
+                            <div class="hero-image screen3-image"></div>
+                            <div class="image-overlay"></div>
+                        </div>
+
+                        <div class="management-card">
+                            <div class="management-icon">
+                                <span class="material-symbols-outlined">insights</span>
+                            </div>
+                            <div class="management-info">
+                                <p class="management-label">Real-time Analytics</p>
+                                <p class="management-text">Track Performance</p>
+                            </div>
+                            <div class="trend-indicator">
+                                <span class="material-symbols-outlined">trending_up</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content Section -->
+                <div class="content-section">
+                    <div class="text-content">
+                        <h1>
+                            Manage Everything <br>
+                            <span class="gradient-text">In One Place</span>
+                        </h1>
+                        <p>
+                            Track your team, monitor budgets, and get real-time updates. Powerful analytics and insights
+                            at your fingertips.
+                        </p>
+                    </div>
+
+                    <div class="button-group screen3-buttons">
+                        <button class="primary-button" id="finishButton">
+                            Get Started
+                        </button>
+                        <button class="secondary-button" id="loginButton2">
+                            Log In
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer Controls -->
+    <footer class="footer">
+        <!-- Pagination Dots -->
+        <div class="pagination-dots" id="paginationDots">
+            <div class="dot active" data-screen="0"></div>
+            <div class="dot" data-screen="1"></div>
+            <div class="dot" data-screen="2"></div>
+        </div>
+
+        <!-- Next Button -->
+        <button class="next-button" id="nextButton">
+            <span class="button-text">Next</span>
+            <span class="material-symbols-outlined arrow-icon">arrow_forward</span>
+        </button>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
